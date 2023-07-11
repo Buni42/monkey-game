@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxtwwgl4wka6m"]
+
+[ext_resource type="Script" path="res://monkey-game/scripts/main/billboard.gd" id="1_0foqt"]
+[ext_resource type="Script" path="res://monkey-game/scripts/main/rotatingcam.gd" id="2_dfexw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26fxf"]
+albedo_color = Color(1, 0.435294, 0.352941, 1)
+emission = Color(0, 0.882353, 0.0235294, 1)
+emission_energy_multiplier = 0.95
+
+[sub_resource type="BoxMesh" id="BoxMesh_s6h0o"]
+
+[node name="GameScene" type="Node3D"]
+
+[node name="billboard" type="MeshInstance3D" parent="."]
+transform = Transform3D(17.7329, 0, 0, 0, 8.58869, 0, 0, 0, 0.237305, 0.0468273, 0.206659, 0.0530486)
+material_override = SubResource("StandardMaterial3D_26fxf")
+mesh = SubResource("BoxMesh_s6h0o")
+script = ExtResource("1_0foqt")
+
+[node name="Label3D" type="Label3D" parent="billboard"]
+transform = Transform3D(0.410666, 0, 0, 0, 0.892774, 0, 0, 0, 1.07945, 0, -1.21817e-06, 1.1237)
+font_size = 24
+outline_size = 8
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.106842, 7.22125, 16.9497)
+script = ExtResource("2_dfexw")
