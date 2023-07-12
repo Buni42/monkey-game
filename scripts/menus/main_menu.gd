@@ -1,11 +1,25 @@
 extends Control
 
+@export var button_hover_audio := AudioStream
+@onready var audio_player := get_node("sfx")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	print("this will be the main menu")
+	$AnimationPlayer.play("MainMenuStart")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func play_audio(stream):
+	if not stream: return
+	audio_player.set_stream(stream)
+	audio_player.play(0.0)
+
+
+func stop_audio():
+	audio_player.stop()
+
+
+func mouse_entered():
+	play_audio(button_hover_audio)
