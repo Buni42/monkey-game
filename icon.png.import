@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1thlsv38d0ko"
-path.s3tc="res://.godot/imported/icon.png-4bca22b6b52c8328f9bee508dd923562.s3tc.ctex"
+path.s3tc="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://monkey-game/icon.png"
-dest_files=["res://.godot/imported/icon.png-4bca22b6b52c8328f9bee508dd923562.s3tc.ctex"]
+source_file="res://icon.png"
+dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.s3tc.ctex"]
 
 [params]
 
