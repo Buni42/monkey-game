@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2hwdnjuwsw7"]
-
-[ext_resource type="Script" path="res://monkey-game/scripts/menus/main_menu.gd" id="1_yv1a6"]
+[gd_scene format=3 uid="uid://c2hwdnjuwsw7"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,4 +7,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yv1a6")
