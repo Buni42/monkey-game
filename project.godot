@@ -11,11 +11,17 @@ config_version=5
 [application]
 
 config/name="First_3D"
-config/description="Enter an interesting project description here!"
-run/main_scene="res://monkey-game/scenes/main/scene_switcher.tscn"
+config/description="monke run"
+run/main_scene="res://scenes/main/scene_switcher.tscn"
 config/features=PackedStringArray("4.1")
-config/icon="res://monkey-game/icon.png"
+config/icon="res://assets/monkey_banana.png"
 
 [autoload]
 
-GAME="*res://monkey-game/scripts/main/helloworld.gd"
+GAME="*res://scripts/main/helloworld.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3

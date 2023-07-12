@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://debgln3wptr3k"]
+[gd_scene load_steps=4 format=3 uid="uid://debgln3wptr3k"]
+
+[ext_resource type="PackedScene" uid="uid://c2hwdnjuwsw7" path="res://scenes/menus/main_menu.tscn" id="1_6xfi4"]
+[ext_resource type="Script" path="res://scripts/main/scene_switcher.gd" id="1_h77ye"]
+[ext_resource type="AudioStream" uid="uid://gflre2da08e6" path="res://assets/MainTheme.mp3" id="3_matfh"]
 
 [node name="SceneSwitcher" type="Node3D"]
+script = ExtResource("1_h77ye")
+main_theme = ExtResource("3_matfh")
+
+[node name="MainMenu" parent="." instance=ExtResource("1_6xfi4")]
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_matfh")
+autoplay = true
