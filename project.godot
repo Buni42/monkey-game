@@ -1,0 +1,21 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="First_3D"
+config/description="Enter an interesting project description here!"
+run/main_scene="res://monkey-game/scenes/main/scene_switcher.tscn"
+config/features=PackedStringArray("4.1")
+config/icon="res://monkey-game/icon.png"
+
+[autoload]
+
+GAME="*res://monkey-game/scripts/main/helloworld.gd"
