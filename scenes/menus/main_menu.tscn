@@ -1,12 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://c2hwdnjuwsw7"]
+[gd_scene load_steps=15 format=3 uid="uid://c2hwdnjuwsw7"]
 
 [ext_resource type="Script" path="res://scripts/menus/main_menu.gd" id="1_5qhda"]
 [ext_resource type="Texture2D" uid="uid://d3xgchgknbedp" path="res://assets/monkey_banana.png" id="1_8qg6o"]
-[ext_resource type="Texture2D" uid="uid://dsef1e7fm7whh" path="res://assets/Title_monkerun.png" id="3_gga1r"]
-[ext_resource type="Texture2D" uid="uid://wweq3n80lro8" path="res://assets/MainmenuButton.png" id="4_ksoys"]
-[ext_resource type="Texture2D" uid="uid://v5mhy8kfytwc" path="res://assets/MainmenuButton_grey.png" id="5_wbkh3"]
-[ext_resource type="FontFile" uid="uid://ctqbsk2o865ux" path="res://assets/KOMTIT__.ttf" id="6_qy3ti"]
-[ext_resource type="AudioStream" uid="uid://do67dbvrtlcp" path="res://assets/UI_hover.mp3" id="7_0t4r0"]
+[ext_resource type="AudioStream" uid="uid://do67dbvrtlcp" path="res://assets/sfx/UI_hover.mp3" id="2_6h255"]
+[ext_resource type="PackedScene" uid="uid://dxtwwgl4wka6m" path="res://scenes/main/game_scene.tscn" id="3_77q0b"]
+[ext_resource type="Texture2D" uid="uid://dsef1e7fm7whh" path="res://assets/UI/Title_monkerun.png" id="4_pv1mk"]
+[ext_resource type="PackedScene" uid="uid://cgmb7cildbef2" path="res://scenes/menus/options.tscn" id="4_udgjg"]
+[ext_resource type="PackedScene" uid="uid://ckpe05lk2hhs" path="res://scenes/menus/credits.tscn" id="5_hxj45"]
+[ext_resource type="Texture2D" uid="uid://wweq3n80lro8" path="res://assets/UI/MainmenuButton.png" id="5_x7xh5"]
+[ext_resource type="Texture2D" uid="uid://v5mhy8kfytwc" path="res://assets/UI/MainmenuButton_grey.png" id="6_t4g0p"]
+[ext_resource type="FontFile" uid="uid://ctqbsk2o865ux" path="res://assets/fonts/KOMTIT__.ttf" id="7_xoe8c"]
 
 [sub_resource type="Animation" id="Animation_bnvbv"]
 resource_name = "MainMenuStart"
@@ -190,7 +193,7 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_yjt16"]
-font = ExtResource("6_qy3ti")
+font = ExtResource("7_xoe8c")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
@@ -202,7 +205,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5qhda")
-button_hover_audio = ExtResource("7_0t4r0")
+button_hover_audio = ExtResource("2_6h255")
+GameScene = ExtResource("3_77q0b")
+Options = ExtResource("4_udgjg")
+Credits = ExtResource("5_hxj45")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -211,6 +217,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_8qg6o")
 expand_mode = 1
 
@@ -232,7 +239,7 @@ grow_horizontal = 2
 [node name="Title" type="TextureRect" parent="TitleHolder"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-texture = ExtResource("3_gga1r")
+texture = ExtResource("4_pv1mk")
 stretch_mode = 4
 
 [node name="Buttons" type="VBoxContainer" parent="."]
@@ -250,8 +257,8 @@ theme_override_constants/separation = 30
 
 [node name="Start" type="TextureButton" parent="Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("4_ksoys")
-texture_hover = ExtResource("5_wbkh3")
+texture_normal = ExtResource("5_x7xh5")
+texture_hover = ExtResource("6_t4g0p")
 
 [node name="Label" type="Label" parent="Buttons/Start"]
 self_modulate = Color(1, 1, 1, 0)
@@ -268,8 +275,8 @@ vertical_alignment = 1
 
 [node name="Options" type="TextureButton" parent="Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("4_ksoys")
-texture_hover = ExtResource("5_wbkh3")
+texture_normal = ExtResource("5_x7xh5")
+texture_hover = ExtResource("6_t4g0p")
 
 [node name="Label" type="Label" parent="Buttons/Options"]
 self_modulate = Color(1, 1, 1, 0)
@@ -286,8 +293,8 @@ vertical_alignment = 1
 
 [node name="Credits" type="TextureButton" parent="Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("4_ksoys")
-texture_hover = ExtResource("5_wbkh3")
+texture_normal = ExtResource("5_x7xh5")
+texture_hover = ExtResource("6_t4g0p")
 
 [node name="Label" type="Label" parent="Buttons/Credits"]
 self_modulate = Color(1, 1, 1, 0)
@@ -304,8 +311,8 @@ vertical_alignment = 1
 
 [node name="Exit" type="TextureButton" parent="Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("4_ksoys")
-texture_hover = ExtResource("5_wbkh3")
+texture_normal = ExtResource("5_x7xh5")
+texture_hover = ExtResource("6_t4g0p")
 
 [node name="Label" type="Label" parent="Buttons/Exit"]
 self_modulate = Color(1, 1, 1, 0)
