@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cgmb7cildbef2"]
+[gd_scene load_steps=3 format=3 uid="uid://cgmb7cildbef2"]
+
+[ext_resource type="FontFile" uid="uid://ctqbsk2o865ux" path="res://assets/fonts/KOMTIT__.ttf" id="1_2k77r"]
+[ext_resource type="Script" path="res://scripts/menus/options.gd" id="1_bjjsg"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -7,3 +10,174 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bjjsg")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -675.0
+offset_top = -400.0
+offset_right = 675.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 80
+tab_alignment = 1
+
+[node name="OPTIONS" type="HBoxContainer" parent="TabContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="video" type="VBoxContainer" parent="TabContainer/OPTIONS"]
+custom_minimum_size = Vector2(450, 700)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label_video" type="Label" parent="TabContainer/OPTIONS/video"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 64
+text = "VIDEO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="TabContainer/OPTIONS/video"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="vsync" type="HBoxContainer" parent="TabContainer/OPTIONS/video"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/OPTIONS/video/vsync"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 32
+text = "VSYNC"
+
+[node name="ShowFps" type="HBoxContainer" parent="TabContainer/OPTIONS/video"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/OPTIONS/video/ShowFps"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.972549, 0.972549, 0.972549, 1)
+theme_override_colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 32
+text = "show fps"
+
+[node name="sound" type="VBoxContainer" parent="TabContainer/OPTIONS"]
+custom_minimum_size = Vector2(450, 700)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label_sound" type="Label" parent="TabContainer/OPTIONS/sound"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 64
+text = "sound"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="TabContainer/OPTIONS/sound"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="master" type="VBoxContainer" parent="TabContainer/OPTIONS/sound"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/OPTIONS/sound/master"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 32
+text = "MASTER"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/OPTIONS/sound/master"]
+layout_mode = 2
+
+[node name="mute" type="HBoxContainer" parent="TabContainer/OPTIONS/sound"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/OPTIONS/sound/mute"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.964706, 0.964706, 0.964706, 1)
+theme_override_colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 32
+text = "mute"
+
+[node name="window" type="VBoxContainer" parent="TabContainer/OPTIONS"]
+custom_minimum_size = Vector2(450, 700)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label_window" type="Label" parent="TabContainer/OPTIONS/window"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 64
+text = "window"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="TabContainer/OPTIONS/window"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="fullscreen" type="HBoxContainer" parent="TabContainer/OPTIONS/window"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/OPTIONS/window/fullscreen"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 32
+text = "fullscreen"
+
+[node name="resizeable" type="HBoxContainer" parent="TabContainer/OPTIONS/window"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/OPTIONS/window/resizeable"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 32
+text = "resizeable"
+
+[node name="borderless" type="HBoxContainer" parent="TabContainer/OPTIONS/window"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/OPTIONS/window/borderless"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
+theme_override_fonts/font = ExtResource("1_2k77r")
+theme_override_font_sizes/font_size = 32
+text = "borderless"
+
+[connection signal="toggled" from="TabContainer/OPTIONS/video/vsync/CheckBox" to="." method="_on_vsync_toggled"]
+[connection signal="toggled" from="TabContainer/OPTIONS/video/ShowFps/CheckBox" to="." method="_on_FPS_toggled"]
+[connection signal="toggled" from="TabContainer/OPTIONS/sound/mute/CheckBox" to="." method="_on_mute_toggled"]
+[connection signal="toggled" from="TabContainer/OPTIONS/window/fullscreen/CheckBox" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="TabContainer/OPTIONS/window/resizeable/CheckBox" to="." method="_on_resizeable_toggled"]
+[connection signal="toggled" from="TabContainer/OPTIONS/window/borderless/CheckBox" to="." method="_on_borderless_toggled"]
