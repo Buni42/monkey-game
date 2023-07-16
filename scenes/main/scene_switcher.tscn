@@ -18,3 +18,4 @@ autoplay = true
 [node name="MainMenu" parent="." instance=ExtResource("1_6xfi4")]
 
 [connection signal="fade_finished" from="Transition" to="." method="_on_transition_fade_finished"]
+[connection signal="fade_started" from="Transition" to="." method="_on_transition_fade_started"]

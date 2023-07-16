@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxtwwgl4wka6m"]
+[gd_scene load_steps=7 format=3 uid="uid://dxtwwgl4wka6m"]
+
+[ext_resource type="Script" path="res://scripts/main/rotatingcam.gd" id="1_418om"]
+[ext_resource type="PackedScene" uid="uid://baqnaa5pk36hg" path="res://assets/Props/Banana.glb" id="2_brwj2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f53eo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -13,7 +16,19 @@ sky = SubResource("Sky_aopar")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="BoxMesh" id="BoxMesh_kk1pb"]
+
 [node name="GameScene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_02ruh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(25.84, 0, 0, 0, 18.432, 0, 0, 0, 1, 0.164474, 0.522402, -42)
+mesh = SubResource("BoxMesh_kk1pb")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("1_418om")
+
+[node name="Banana" parent="." instance=ExtResource("2_brwj2")]
+transform = Transform3D(6.14297, 0, 6.94239, 0, 9.27, 0, -6.94239, 0, 6.14297, -28.9064, 3.73472, 2.82733)
