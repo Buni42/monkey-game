@@ -1,14 +1,20 @@
 extends Control
 
 @export var button_hover_audio := AudioStream
+@export var GameScene := PackedScene
+@export var Options := PackedScene
+@export var Credits := PackedScene
+
 @onready var audio_player := get_node("sfx")
+@onready var start := get_node("Buttons/Start")
+@onready var options := get_node("Buttons/Options")
+@onready var credits := get_node("Buttons/Credits")
+@onready var exit := get_node("Buttons/Exit")
+
 
 func _ready():
-	print("this will be the main menu")
+	print("main menu")
 	$AnimationPlayer.play("MainMenuStart")
-
-func _process(delta):
-	pass
 
 
 func play_audio(stream):
@@ -23,3 +29,4 @@ func stop_audio():
 
 func mouse_entered():
 	play_audio(button_hover_audio)
+
