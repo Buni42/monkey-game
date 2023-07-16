@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckpe05lk2hhs"]
+
+[ext_resource type="Texture2D" uid="uid://dsef1e7fm7whh" path="res://assets/UI/Title_monkerun.png" id="1_a7vfs"]
+[ext_resource type="Script" path="res://scripts/menus/credits.gd" id="1_hwi0d"]
+[ext_resource type="FontFile" uid="uid://ctqbsk2o865ux" path="res://assets/fonts/KOMTIT__.ttf" id="2_6olrj"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hwi0d")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(1000, 2000)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 150
+
+[node name="TitleMonkerun" type="Sprite2D" parent="ScrollContainer/VBoxContainer"]
+position = Vector2(503, 120)
+scale = Vector2(0.815, 0.815)
+texture = ExtResource("1_a7vfs")
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="intorduction" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 76
+text = "A game made by team Monke"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 64
+text = "Game designer: Buni42"
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 64
+text = "programmer: Buni42"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 64
+text = "3D Designer/Animator: ealy"
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 64
+text = "music: ealy"
+
+[node name="thanks" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 76
+text = "thanks to?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="thanks2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 76
+text = "thank you for playing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="made in godot" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_6olrj")
+theme_override_font_sizes/font_size = 76
+text = "This game was made in Godot Engine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
