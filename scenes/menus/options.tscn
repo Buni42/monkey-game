@@ -107,6 +107,8 @@ text = "MASTER"
 
 [node name="HSlider" type="HSlider" parent="TabContainer/OPTIONS/sound/master"]
 layout_mode = 2
+min_value = -50.0
+max_value = 50.0
 
 [node name="mute" type="HBoxContainer" parent="TabContainer/OPTIONS/sound"]
 layout_mode = 2
@@ -177,6 +179,7 @@ text = "borderless"
 
 [connection signal="toggled" from="TabContainer/OPTIONS/video/vsync/CheckBox" to="." method="_on_vsync_toggled"]
 [connection signal="toggled" from="TabContainer/OPTIONS/video/ShowFps/CheckBox" to="." method="_on_FPS_toggled"]
+[connection signal="value_changed" from="TabContainer/OPTIONS/sound/master/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="toggled" from="TabContainer/OPTIONS/sound/mute/CheckBox" to="." method="_on_mute_toggled"]
 [connection signal="toggled" from="TabContainer/OPTIONS/window/fullscreen/CheckBox" to="." method="_on_fullscreen_toggled"]
 [connection signal="toggled" from="TabContainer/OPTIONS/window/resizeable/CheckBox" to="." method="_on_resizeable_toggled"]
